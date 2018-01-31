@@ -1,0 +1,42 @@
+/* pages/q&a/q&a.wxss */
+
+.qa_list .item {
+  width: 650rpx;
+  padding: 0 20rpx;
+  margin: 30rpx auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.qa_list .item .answer {
+  font-size: 26rpx;
+  color: #888;
+  border-top: 1px solid #f0f0f0;
+  padding: 16rpx 0;
+  text-align: justify;
+}
+.qa_list .item .question text {
+  font-size: 30rpx;
+  line-height: 88rpx;
+}
+.qa_list .item .question image {
+  width: 28rpx;
+  height: 28rpx;
+  float: right;
+  transform: rotate(90deg);
+  margin-top: 30rpx;
+  transition: all .3s ease;
+}
+.qa_list .item.active .question image {
+  transform: rotate(-90deg);
+}
+.contact {
+  margin-top: 50rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.contact .service {
+  width: 690rpx;
+  /* height: 72rpx; */
+  /* font-size: 26rpx; */
+  /* line-height: 72rpx; */
+}

@@ -1,0 +1,112 @@
+/* pages/enchashment/enchashment.wxss */
+.enchashment {
+  width: 690rpx;
+  margin: 30rpx auto;
+  background-color: #f7f7f7;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.info {
+  height: 90rpx;
+  width: 100%;
+  padding: 30rpx 26rpx; 
+}
+.info .title {
+  font-size: 34rpx;
+}
+.info .left_money {
+  font-size: 40rpx;
+  color: #888;
+  margin-left: 64rpx;
+}
+.info .prompt {
+  font-size: 26rpx;
+  color: #888;
+  margin-top: 16rpx;
+}
+
+.manipulate {
+  padding: 30rpx 26rpx; 
+  background-color: #fff;
+}
+.manipulate .ali_account{
+  /* font-size: 34rpx; */
+  margin-bottom: 20rpx;
+}
+.manipulate .ali_account text{
+  font-size: 34rpx;
+}
+.manipulate .ali_account input{
+  font-size: 26rpx;
+  display: inline-block;
+  vertical-align: middle;
+  width: 320rpx;
+  margin-left: 20rpx;
+}
+.manipulate .ali_account button{
+  vertical-align: middle;
+  padding: 0 20rpx;
+  height: 60rpx;
+  line-height: 56rpx;
+}
+.manipulate .title {
+  font-size: 34rpx;
+}
+.manipulate .input_wrp {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20rpx 0 10rpx;
+}
+.manipulate .input_wrp text {
+  font-size: 40rpx;
+  vertical-align: middle;
+}
+.manipulate .input_wrp input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 560rpx;
+  font-size: 60rpx;
+  height: 1.2em;
+}
+.manipulate .prompt {
+  font-size: 26rpx;
+  color: #888;
+}
+.manipulate .all {
+  font-size: 26rpx;
+  color: #576b95;
+}
+.manipulate .submit {
+  margin-top: 44rpx;
+}
+.manipulate .tip {
+  display: block;
+  font-size: 26rpx;
+  color: #888;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.btn_wrp {
+  text-align: center;
+}
+.btn_wrp .suggest {
+  color: #576895;
+  border: none;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  height: 72rpx;
+  padding: 0 20rpx;
+}
+.QA {
+  text-align: center;
+  position: fixed;
+  bottom: 20rpx;
+  width: 100%;
+}
+.QA .suggest {
+  color: #888;
+  border: none;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  height: 72rpx;
+}

@@ -1,0 +1,37 @@
+<!--pages/personalZone/personalZone.wxml-->
+<view class="personal" bind:tap="{{pointInstruState ? 'hidePointInstruction' : null}}">
+  <view class="summary">
+    <view class="user_info">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+      <view class="info">
+        <view class="name">{{userInfo.nickName}}</view>
+        <!-- <view class="phone">13637115342</view> -->
+      </view>
+    </view>
+  </view>
+
+  <navigator class="money" hover-class="none" url="/pages/enchashment/enchashment" open-type="navigate">
+    <image mode="aspectFit" class="tab_icon" src="../../images/zone_wallet.png"></image>
+    <text class="title">余额提现</text>
+    <text class="prompt">{{pointInfo && pointInfo.userMoney ? pointInfo.userMoney : 0 }}</text>
+  </navigator>
+
+  <view class="nav clearfix">
+    <navigator class="navigator" hover-class="none" url="/pages/record/record" open-type="navigate">
+      <image mode="aspectFit" class="tab_icon" src="../../images/zone_record.png"></image>
+      <view class="title">红包记录</view>
+    </navigator>
+    <navigator class="navigator" hover-class="none" url="/pages/QA/QA" open-type="navigate">
+      <image mode="aspectFit" class="tab_icon" src="../../images/zone_q_a.png"></image>
+      <view class="title">新手帮助</view>
+    </navigator>
+    <button class="navigator" open-type="contact">
+      <image mode="aspectFit" class="tab_icon" src="../../images/zone_service.png"></image>
+      <view class="title">联系客服</view>
+    </button>
+  </view>
+  <view class="code" wx:if="{{ pointInfo.showStatus == 2 }}" bind:tap="setClipBoard">
+    <image src="../../images/qr_code.png" mode="aspectFit"></image>
+    <text>更多精彩请关注官方公众号</text>
+  </view>
+</view>

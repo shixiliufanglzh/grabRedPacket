@@ -1,0 +1,12 @@
+<!--pages/suggestion/suggestion.wxml-->
+<view class="all">
+  <view class="title">请选择投诉原因</view>
+  <view class="options">
+    <view class="item" wx:for="{{list}}" wx:key="{{item.id}}" data-id="{{item.id}}" bind:tap="selectedReason">
+      <text>{{item.val}}</text>
+      <icon type="success_no_circle" size="20" hidden="{{!item.selected}}"/>
+    </view>
+    <textarea maxlength="200" placeholder='投诉内容'></textarea>
+    <button type='primary' bind:tap="submitSugst">提交投诉信息</button>
+  </view>
+</view>

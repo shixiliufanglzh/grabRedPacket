@@ -1,0 +1,157 @@
+/* pages/createRedPacket/createRedPacket.wxss */  
+
+form {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+   padding: 30rpx; 
+}
+.send_red_packet .token_wrp {
+  width: 662rpx;
+  background-color: #fff;
+  font-size: 34rpx;
+  height: 88rpx;
+  padding: 0 20rpx;
+  border-radius: 6rpx;
+  margin-top: 50rpx;
+}
+.send_red_packet .token_wrp .title {
+  line-height: 88rpx;
+  vertical-align: middle;
+}
+.send_red_packet .token_wrp .input {
+  width: 400rpx;
+  line-height: 88rpx;
+  height: 88rpx;
+  vertical-align: middle;
+  text-align: right;
+  float: right; 
+}
+.send_red_packet .token_wrp .input.msg {
+  width: 500rpx;
+}
+.send_red_packet .token_wrp span {
+  width: 36rpx;
+  height: 40rpx;
+  float: right;
+  margin-left: 10rpx;
+  margin-top: 24rpx;
+}
+.send_red_packet .token_wrp .unit {
+  margin-top: 22rpx;
+}
+
+
+.prompt_wrp {
+  font-size: 0;
+  margin-top: 16rpx;
+}
+.prompt_wrp .token_prompt {
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #b2b2b2;
+}
+
+.recommend {
+  width: 690rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: 26rpx;
+}
+.recommend .item {
+  display: inline-block;
+  width: 100rpx;
+  border: 1px solid #ddd;
+  font-size: 26rpx;
+  color: #b2b2b2;
+  text-align: center;
+  border-radius: 8rpx;
+  background-color: #fff;
+  line-height: 50rpx;
+}
+.recommend .item.selected {
+  border-color: #ec5e3a;
+  color: #ec5e3a;
+}
+
+.checkbox_wrp {
+  font-size: 28rpx;
+  color: #353535;
+  margin-top: 30rpx;
+  width: 690rpx;
+
+}
+.checkbox_wrp checkbox {
+  zoom:60%;
+  vertical-align: middle;
+  margin-top: -12rpx;
+}
+.checkbox_wrp label {
+  margin: 0 26rpx;
+}
+
+.btn-area {
+  margin-top: 200rpx;
+  width: 690rpx;
+  text-align: center;
+}
+.btn-area .money_prompt {
+  display: block;
+  text-align: center;
+  font-size: 26rpx;
+  color: #576b95;
+  margin-bottom: 24rpx;
+}
+.btn-area .money_prompt checkbox {
+  zoom:60%;
+  vertical-align: middle;
+  margin-top: -12rpx;
+}
+.btn-area .submit {
+  width: 100%;
+  background-color: #E43B3B;
+  color: #fff;
+}
+.btn-area .warning {
+  font-size: 26rpx;
+  line-height: 40rpx;
+  color: #888;
+}
+
+.token_options {
+  /* display: none; */
+  width: 600rpx;
+  max-height: 720rpx;
+  position: fixed;
+  top: 220rpx;
+  left: 50%;
+  margin-left: -320rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 20rpx;
+  z-index: 999;
+}
+
+.token_options .title {
+  font-size: 28rpx;
+  color: #353535;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+.token_options .list .item {
+  font-size: 34rpx;
+  color: #353535;
+  line-height: 72rpx;
+  height: 72rpx;
+  width: 600rpx;
+  overflow: hidden;
+  border-bottom: 1px dashed #888;
+}
+
+

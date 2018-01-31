@@ -1,0 +1,39 @@
+/* pages/suggestion/suggestion.wxss */
+
+.all .title {
+  color: #888;
+  font-size: 28rpx;
+  padding-left: 30rpx;
+  line-height: 60rpx;
+}
+
+.all .options {
+  background-color: #fff;
+  padding-left: 30rpx;
+  padding-bottom: 30rpx;
+}
+.all .options .item {
+  font-size: 34rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.all .options .item:last-of-type {
+  border-bottom: none;
+}
+.all .options .item icon {
+  height: 20rpx;
+  float: right;
+  margin: 16rpx 30rpx 0 0;
+}
+textarea {
+  width: 630rpx;
+  height: 160rpx;
+  padding: 30rpx;
+  background-color: #f0f0f0;
+  font-size: 32rpx;
+  margin-bottom: 60rpx;
+}
+
+button {
+   margin: 30rpx 30rpx 30rpx 0rpx; 
+}

@@ -1,0 +1,15 @@
+<!--pages/q&a/q&a.wxml-->
+<view class="all">
+  <view class="qa_list">
+    <view wx:for="{{listContent}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="itemName" class="item {{itemName.showAnswer ? 'active' : ''}}">
+      <view class="question" data-idx="{{idx}}" bind:tap="toggleAnswer">
+        <text>{{itemName.q}}</text>
+        <image mode="aspectFit" src="../../images/arrow.png"></image>
+      </view>
+      <view class="answer" hidden="{{!itemName.showAnswer}}">{{itemName.a}}</view>
+    </view>
+  </view>
+  <view class="contact">
+    <button class="service" type="primary" open-type="contact">联系在线客服</button>
+  </view>
+</view>

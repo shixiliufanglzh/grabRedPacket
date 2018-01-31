@@ -1,0 +1,108 @@
+/* pages/personalZone/personalZone.wxss */
+.summary {
+  padding: 0 30rpx;
+  background-color: #fff;
+  margin-bottom: 16rpx;
+}
+.summary .user_info {
+  height: 200rpx;
+  padding-left: 160rpx;
+  position: relative;
+}
+.summary .user_info .avatar {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 35rpx;
+  left: 0;
+}
+.summary .user_info .info {
+  padding-top: 70rpx; 
+}
+.summary .user_info .info .name {
+  font-size: 36rpx;
+  color: #000;
+}
+
+.nav {
+  background-color: #fff;
+  /* min-height: 416rpx; */
+}
+.nav .navigator {
+  background-color: #fff;
+  width: 250rpx;
+  height: 206rpx;
+  padding: 20rpx 0;
+  float: left;
+  text-align: center;
+  font-size: 0;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 0;
+  /* margin: -1px; */
+}
+.nav .navigator:nth-child(3n) {
+  width: 251rpx;
+  margin-right: -1px;
+}
+.nav button.navigator::after {
+  border: none;
+}
+.nav navigator image,
+.nav .navigator image {
+  width: 106rpx;
+  height: 106rpx;
+}
+.nav navigator .title,
+.nav .navigator .title {
+  font-size: 26rpx;
+  color: #000;
+  line-height: 60rpx;
+}
+
+.money {
+  background-color: #fff;
+  margin-bottom: 10rpx;
+}
+.money {
+  height: 88rpx;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  padding-left: 30rpx;
+}
+.money .tab_icon {
+  width: 58rpx;
+  height: 58rpx;
+  vertical-align: middle;
+}
+.money .title {
+  line-height: 88rpx;
+  font-size: 34rpx;
+  margin-left: 20rpx;
+}
+.money .prompt {
+  position: absolute;
+  right: 30rpx;
+  line-height: 88rpx;
+  color: #EC5E3A;
+  font-size: 26rpx;
+}
+
+.code {
+  /* background-color: #fff; */
+  height: 330rpx;
+  text-align: center;
+}
+.code image {
+  width: 208rpx;
+  height: 208rpx;
+  margin: 200rpx auto 10rpx;
+}
+.code text {
+  display: block;
+  text-align: center;
+  font-size: 26rpx;
+  color: #888;
+}

@@ -1,0 +1,40 @@
+{
+  "pages": [
+    
+    "pages/createRedPacket/createRedPacket",
+    "pages/personalZone/personalZone",
+    "pages/redPacketDetail/redPacketDetail",
+    "pages/record/record",
+    "pages/QA/QA",
+    "pages/enchashment/enchashment", 
+    "pages/suggestion/suggestion"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E43B3B",
+    "navigationBarTitleText": "欢乐雨",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#E43B3B"
+  },
+  "tabBar": {
+    "selectedColor": "#E43B3B",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/createRedPacket/createRedPacket",
+        "text": "发红包",
+        "iconPath": "images/tab_01_normal.png",
+        "selectedIconPath": "images/tab_01_selected.png"
+      },
+      {
+        "pagePath": "pages/personalZone/personalZone",
+        "text": "我的",
+        "iconPath": "images/tab_04_normal.png",
+        "selectedIconPath": "images/tab_04_selected.png"
+      }
+    ]
+  }
+}

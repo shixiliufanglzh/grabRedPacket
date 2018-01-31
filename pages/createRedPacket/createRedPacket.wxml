@@ -1,0 +1,44 @@
+<!--pages/createRedPacket/createRedPacket.wxml-->
+
+<view>
+  <form class="send_red_packet" bindsubmit="formSubmit" report-submit="{{true}}">
+    <block>
+      <view class="section token_wrp">
+        <label class="title" for="money">红包总额</label>
+        <span class="unit">元</span>
+        <input name="money" type="digit" id="money" class="input money" bindinput="limitInput" placeholder="请输入金额" />
+      </view>
+      <!-- <view class="prompt_wrp">
+        <text class="token_prompt">每个人抽到金额随机</text>
+      </view> -->
+    </block>
+
+    <block>
+      <view class="section token_wrp">
+        <label class="title" for="count">红包总量</label>
+        <span class="unit">个</span>
+        <input name="count" type="number" id="count" class="input count" placeholder="请输入数量" />
+      </view>
+      <view class="prompt_wrp">
+        <text class="token_prompt">红包数量为100~20000个</text>
+      </view>
+    </block>
+
+    <block wx:if="{{ pointInfo.showStatus == 2 }}">
+      <view class="section token_wrp">
+        <label class="title" for="msg">留言</label>
+        <input name="msg" type="text" id="msg" class="input msg" maxlength="24" placeholder="红包雨来了，不拼运气拼手速" />
+      </view>
+    </block>
+
+    <view class="btn-area">
+      <!-- <checkbox-group name="cashCheck"> -->
+        <label class="money_prompt">
+          <!-- <checkbox value="cash" /> -->
+          收取￥{{fee}}服务费，优先使用余额{{pointInfo.userMoney}}</label>
+      <!-- </checkbox-group> -->
+      <button class="submit" formType="submit">生成红包雨</button>
+    </view>
+
+  </form>
+</view>

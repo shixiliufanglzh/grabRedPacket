@@ -1,0 +1,38 @@
+<!--pages/enchashment/enchashment.wxml-->
+<view class="enchashment">
+  <view class="info">
+    <view>
+      <text class="title">账户余额</text>
+      <text class="left_money">{{pointInfo.userMoney}}</text>
+    </view>
+    <text class="prompt">提现到微信零钱</text>
+  </view>
+
+  <view class="manipulate">
+    <!-- <view class="ali_account">
+      <text>支付宝账户</text>
+      <input type="text" value="{{curInputAliAcc}}" placeholder="输入支付宝账号" placeholder-style="color:#ddd;font-size:32rpx" bindinput="inputAliAccount" disabled='{{!!pointInfo.aliAccount}}' />
+      <button type="primary" wx:if="{{!!pointInfo.aliAccount}}" size="mini" plain="true" bind:tap="changeAliAccount">修改</button>
+      <button type="primary" wx:else size="mini" plain="true" bind:tap="addAliAccount" >添加</button>
+    </view>  -->
+    <text class="title">提现金额</text>
+    <view class="input_wrp">
+      <text>￥</text><input type="digit" value="{{enchashCount}}" bindinput="inputCash" placeholder="输入提现金额" placeholder-style="color:#ddd;font-size:40rpx"/>
+    </view>
+    <block>
+      <!-- <text class="prompt">需要额外扣除￥0.1手续费，</text> -->
+      <text class="all" bind:tap="drawAll">全部金额</text>
+    </block>
+    <button class="submit" type="primary" bind:tap="enchashSubmit">提现</button>
+    <text class="tip">1~5工作日内到账</text>
+  </view>
+</view>
+
+<view class="btn_wrp">
+  <button class="suggest" plain="{{true}}" size="mini" open-type="contact">联系客服</button>
+  <button class="suggest" plain="{{true}}" size="mini" bind:tap="goSuggest">投诉</button>
+</view>
+
+<view class="QA">
+  <button class="suggest" plain="{{true}}" size="mini" bind:tap="goQA">常见问题</button>
+</view>

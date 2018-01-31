@@ -1,0 +1,229 @@
+/* pages/redPacketDetail/redPacketDetail.wxss */
+.header {
+  background-color: #E43B3B;
+  text-align: center;
+}
+.header .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 6rpx;
+  margin: 50rpx 0 6rpx;
+}
+.header .name {
+  display: block;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.header .record {
+  margin: 100rpx auto 20rpx;
+  border-radius: 50rpx;
+  width: 670rpx;
+  background-color: #E99839;
+}
+.header .record.finish {
+  background-color: #C33333;
+  color: #fff;
+}
+.header .prompt {
+  font-size: 26rpx;
+  color: #fff;
+}
+.header .interaction {
+  padding: 10rpx 30rpx;
+}
+.header .interaction .flex-item {
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+.header .interaction .flex-item::after {
+  border: none;
+}
+.header .interaction .flex-item image {
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-right: 6rpx;
+}
+
+.process_prompt {
+  /* text-align: center; */
+  line-height: 72rpx;
+  font-size: 28rpx;
+  color: #888;
+  margin-left: 30rpx;
+}
+.process_prompt .suggest {
+  color: #576895;
+  border: none;
+  font-size: 28rpx;
+  float: right;
+  line-height: 72rpx;
+  height: 72rpx;
+}
+.grab_list {
+  background-color: #fff;
+}
+.grab_list .grab_item {
+  height: 146rpx;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 152rpx;
+  padding-right: 30rpx;
+  position: relative;
+}
+.grab_list .grab_item .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 18rpx;
+}
+.grab_list .grab_item .info {
+  position: relative;
+  height: 100%;
+}
+
+.grab_list .grab_item .info .gainer .name {
+  display: inline-block;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.grab_list .grab_item .info .gainer image {
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin-right: 6rpx;
+  margin-left: 6rpx;
+}
+.grab_list .grab_item .info .money {
+  position: absolute;
+  right: 0;
+  top: 53rpx;
+  font-size: 34rpx;
+  line-height: 40rpx;
+}
+.grab_list .grab_item .info .time {
+  /* position: absolute;
+  right: 0;
+  bottom: 30rpx; */
+  display: block;
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #aaa;
+  margin-top: 20rpx;
+}
+
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  z-index: 998;
+}
+.red_rain .red_item {
+  position: absolute
+  
+}
+.red_rain .red_item image {
+  width: 100rpx;
+  height: 120rpx;
+}
+.red_rain .red_item text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 50rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 20rpx;
+}
+
+.stop {
+  width: 100%;
+  height: 148rpx;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); 
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+.stop button {
+  width: 300rpx;
+  height: 68rpx;
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: 50rpx;
+  background-color: #222020;
+  margin-top: 40rpx;
+}
+
+
+.grab_result {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  z-index: 998;
+}
+.grab_result .info {
+  position: absolute;
+  width: 514rpx;
+  height: 682rpx;
+  top: 240rpx;
+  left: 50%;
+  margin-left: -257rpx;
+  color: #E99839;
+  font-size: 26rpx;
+  text-align: center;
+}
+.grab_result .info .close {
+  position: absolute;
+  width: 46rpx;
+  height: 46rpx;
+  right: -46rpx;
+  top: -46rpx;
+}
+.grab_result .info .packet {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.grab_result .info .avatar {
+  position: absolute;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  top: 100rpx;
+  left: 192rpx;
+}
+.grab_result .info .name {
+  position: absolute;
+  top: 272rpx;
+  width: 100%;
+}
+.grab_result .info .count {
+  position: absolute;
+  top: 320rpx;
+  width: 100%;
+}
+.grab_result .info .money{
+  position: absolute;
+  bottom: 144rpx;
+  width: 100%;
+}
+.grab_result .info .money text{
+  font-size: 60rpx;
+}

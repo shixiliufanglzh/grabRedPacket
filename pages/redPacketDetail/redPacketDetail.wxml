@@ -1,0 +1,67 @@
+<!--pages/redPacketDetail/redPacketDetail.wxml-->
+<view class="all" bind:tap="{{pointInstruState ? 'hidePointInstruction' : null}}">
+  <view class="header">
+     <image class="avatar" src="{{redPacketDetail.userPortrait}}" bind:tap="viewAvatar" data-avatar="{{redPacketDetail.userPortrait}}" mode="aspectFill"></image>
+    <text class="name">{{redPacketDetail.userName}}</text> 
+
+    <button class="record finish" wx:if="{{redPacketDetail.redStatus == 2}}" type="primary">该红包已失效</button> 
+    <button class="record" wx:elif="{{redPacketDetail.leftAmount > 0 && redPacketDetail.winStatus == 2}}" type="primary" bind:tap="startGrabRed">开始抢红包</button>
+     <button class="record finish" wx:elif="{{redPacketDetail.leftAmount <= 0}}" type="primary">红包已经被抢光了</button>
+    <button class="record finish" wx:elif="{{redPacketDetail.leftAmount > 0 && redPacketDetail.winStatus == 1}}" type="primary">您已经领过该红包</button> 
+
+    <view class="interaction flex-wrp">
+      <button class="flex-tab flex-item" bind:tap="goToEnchash"><image src="../../images/inter_cash.png" mode="aspectFit"></image>去提现</button>
+      <button class="flex-tab flex-item" bind:tap="goToCreate"><image src="../../images/inter_record.png" mode="aspectFit"></image>我也玩</button>
+      <button class="flex-tab flex-item" open-type="share"><image src="../../images/inter_share.png" mode="aspectFit"></image>去分享</button>
+    </view>
+  </view>
+
+  <view class="process_prompt">
+     <text>{{ redPacketDetail.money ? ('共'+redPacketDetail.money+'元，已领取'+(redPacketDetail.amount - redPacketDetail.leftAmount)+'/'+redPacketDetail.amount+'个') : ''}}</text> 
+    <button class="suggest" plain="{{true}}" size="mini" bind:tap="goSuggest">投诉</button>
+  </view>
+
+
+   <view class="grab_list">
+    <view class="grab_item" wx:for="{{grabList}}" wx:key="{{itemName.id}}" wx:for-index="idx" wx:for-item="itemName" data-id="{{itemName.id}}">
+      <image bind:tap="viewAvatar" data-avatar="{{itemName.userPortrait}}" src="{{itemName.userPortrait}}" mode="aspectFill" class="avatar" ></image>
+      <view class="info">
+        <view class="gainer">
+          <text class="name">{{itemName.userName}}</text>
+          <image hidden="{{itemName.userSex != '男' && itemName.userSex != '女'}}" src="../../images/{{itemName.userSex == '男' ? 'man' : 'woman'}}.png" mode="aspectFit"></image>
+        </view>
+        <text class="money">{{itemName.money}}元</text>
+        <text class="time">{{itemName.createDate}}</text>
+      </view>
+    </view>
+  </view> 
+  
+</view>
+
+
+
+<!-- 抢红包的遮罩 -->
+<view class="wrapper" catch:touchstart="null" hidden="{{!isGrabing}}">
+  <!-- <image class="bg" src="" mode="aspectFill"></image> -->
+  <view class="red_rain" catch:touchstart="null">
+    <view class="red_item" wx:for="{{redList}}" wx:for-index="idx" wx:key="{{idx}}" wx:for-item="red" style="left:{{red.left}}rpx;top:{{red.top}}rpx;" data-idx="{{idx}}" catch:touchstart="getRed">
+      <image src="../../images/red.png" mode="aspectFit" style="transform:rotate({{red.rotate}}deg)" hidden="{{red.open}}"></image>
+      <text hidden="{{!red.open}}">+1</text>
+    </view>
+  </view>
+</view>
+
+<view class="stop" hidden="{{!isGrabing}}">
+  <button bind:tap="stopGrabRed">停止挑战</button>
+</view>
+
+<view class="grab_result" hidden="{{!hasResult}}">
+  <view class="info">
+    <image class="close" src="../../images/close_red.png" mode="aspectFit" bind:tap="closeResult"></image>
+    <image class="packet" src="../../images/red_count.png" mode="aspectFill"></image>
+    <image class="avatar" src="{{pointInfo.userPortrait}}" mode="aspectFill"></image>
+    <view class="name">{{pointInfo.nikeName}}</view>
+    <view class="count">{{grabResult.code=='no_red' ? '您来晚了，红包已经被抢完了':(grabResult.code=='finish' ? '红包已经被抢完了,您抢得'+grabResult.getNum+'个红包':'恭喜您抢得'+grabResult.getNum+'个红包')}}</view>
+    <view class="money"><text>{{grabResult.code == 'no_red' ? 0:grabResult.money}}</text>元</view>
+  </view>
+</view>

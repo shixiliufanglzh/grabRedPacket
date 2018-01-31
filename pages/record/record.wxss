@@ -1,0 +1,114 @@
+/* pages/record/record.wxss */
+/* pages/ranking/ranking.wxss */
+.top-tab{
+  width: 750rpx;
+  height: 100rpx;
+  background: #fff;
+  color: #888;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  margin: 0 0 1rpx 0;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  border-bottom: 1px solid #f0f0f0;
+}
+.toptab.active{
+  color: #EC5E3A;
+  border-bottom: solid 2px #EC5E3A;
+}
+
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  color: #000;
+  margin: 101rpx 0 0 0;
+}
+.container .content .total {
+  padding: 50rpx;
+  text-align: center;
+}
+.container .content .total .avatar{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 6rpx;
+  margin-bottom: 20rpx;
+}
+.container .content .total .sum{
+  font-size: 34rpx;
+}
+.container .content .total .sum .money {
+  margin: 10rpx 0 16rpx;
+}
+.container .content .total .sum .money text {
+  display: inline-block;
+  font-size: 60rpx;
+}
+.container .content .total .sum .count{
+  font-size: 26rpx;
+}
+.container .content .total .sum .count text{
+  color: #D7A440;
+  font-size: 34rpx;
+}
+
+.container .content .detail_list {
+  background-color: #fff;
+}
+.container .content .detail_list .detail_item {
+  height: 88rpx;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 24rpx 30rpx;
+}
+.container .content .detail_list .detail_item image {
+  height: 88rpx;
+  width: 88rpx;
+  float: left;
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+}
+.container .content .detail_list .detail_item .left {
+  float: left;
+  height: 136rpx;
+}
+.container .content .detail_list .detail_item .left .token {
+  display: block;
+  width: 500rpx;
+  font-size: 34rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.container .content .detail_list .detail_item .left .name {
+  display: block;
+  font-size: 34rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+.container .content .detail_list .detail_item .left .time {
+  font-size: 28rpx;
+  color: #888;
+}
+.container .content .detail_list .detail_item .left .time .from {
+  color: #666;
+}
+.container .content .detail_list .detail_item .right {
+  float: right;
+  text-align: right;
+  height: 136rpx;
+}
+.container .content .detail_list .detail_item .right .money {
+  display: block;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+.container .content .detail_list .detail_item .right .count {
+  font-size: 28rpx;
+  color: #888;
+}
+
+

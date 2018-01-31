@@ -1,0 +1,56 @@
+<!--pages/record/record.wxml-->
+<view class="ranking">
+  <view class="top-tab flex-wrp flex-tab " >
+    <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bind:tap="switchTab" wx:key="{{idx}}">
+      {{itemName}}
+    </view>
+  </view>
+
+  <scroll-view scroll-y="true" class="container">
+    <view class="content" hidden="{{currentNavtab==0 ? '' : true}}">
+       <view class="total">
+        <image class="avatar" src="{{userSend.avatar}}" mode="aspectFill"></image>
+        <view class="sum">
+          <text>账号共发出</text>
+          <view class="money"><text>{{userSend.money}}</text>元</view>
+          <view class="count">发出次数 <text>{{userSend.count}}</text></view>
+        </view>
+      </view> 
+      <view class="detail_list" wx:for="{{sendRecord}}" wx:for-index="idx" wx:for-item="item" wx:key="{{idx}}" data-red-id="{{item.id}}" bind:tap="goToDetail">
+        <view class="detail_item">
+          <view class="left">
+            <!-- <text class="token">{{item.redType == 2 ? '【语音口令】' : item.token}}</text> -->
+            <text class="name">{{item.name}}</text>
+            <text class="time">{{item.time}}</text>
+          </view>
+          <view class="right">
+            <text class="money">{{item.money}}元</text>
+            <text class="count">{{item.totalCount - item.leftCount}}/{{item.totalCount}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="content" hidden="{{currentNavtab==1 ? '' : true}}">
+       <view class="total">
+        <image class="avatar" src="{{userReceive.avatar}}" mode="aspectFill"></image>
+        <view class="sum">
+          <text>账号共收入</text>
+          <view class="money"><text>{{userReceive.money}}</text>元</view>
+          <view class="count">参与次数 <text>{{userReceive.count}}</text></view>
+        </view>
+      </view> 
+      <view class="detail_list" wx:for="{{receiveRecord}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="item" data-red-id="{{item.id}}" bind:tap="goToDetail">
+        <view class="detail_item">
+          <image src="{{item.avatar}}" mode="aspectFill"></image>
+          <view class="left">
+            <text class="name">{{item.name}}</text>
+            <text class="time">{{item.time}}</text>
+          </view>
+          <view class="right">
+            <text class="money">{{item.money}}元</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
